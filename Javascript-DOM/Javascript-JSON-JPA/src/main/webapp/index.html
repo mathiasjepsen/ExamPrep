@@ -1,0 +1,67 @@
+<!--
+Start Code For the Exercise JavaScript, DOM, JSON, AJAX and JPA
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam Preparation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- CDN Polyfills which should allow you to use fetch (and promises) from IE and older browsers -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+    </head>
+    <body class="container">
+        <div id='warning'></div>
+        <H2>Data Generator</h2>
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="gender"> Gender: </label>
+                <select id="gender" class="form-control"  >
+                    <option>both</option>
+                    <option>male</option>
+                    <option>female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="region"> Region: </label>
+                <select id="region"  class="form-control">
+                    <option>All</option>
+                    <option>Denmark</option>
+                    <option>Germany</option>
+                    <option>England</option>
+                    <option>Hungary</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label> Amount:&nbsp; </label><input style="width: 5em;" class="form-control" type="number" id="amount" value="4"> 
+            </div>
+            <button class="btn btn-default" id="btnsend"> Submit </button>
+            <button class="btn btn-default" id="btnsql"> Get SQL... </button>
+            <br/>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <table id="tbl" class="table">
+                        <thead>
+                        <th>First Name</th><th>Surname</th><th>Gender</th>
+                        </thead>
+                        <!-- >TODO: Dynamically create the rows with data fetched from the API, and insert into the table here -->
+                        <tbody id="tblbody"></tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <p>Copy SQL into clipboard from below:</p>
+                    <!-- TODO: Create the necessary SQL-script to insert all data fetched from the API, into a table with matching colums -->
+                    <textarea readonly id="sql" style="width: 100%" rows="6"></textarea>
+
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- >TODO: Create this file and place all your JavaScript here -->
+    <script src="app.js"></script>
+</html>
